@@ -5,7 +5,7 @@ Here is a small package who will permit you to customize your GLPI 10.0
 ## How it works
 
 You have two things here :
-* the *glpi* folder* : who contain the files you want to replace to customize your GLPI
+* the *glpi* folder : who contain the files you want to replace to customize your GLPI
 * the *scp_creator.py* python file : who will write all the scp lines in a powershell file
 
 ___
