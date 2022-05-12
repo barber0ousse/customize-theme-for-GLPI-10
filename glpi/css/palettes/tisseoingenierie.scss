@@ -1,0 +1,113 @@
+/*!
+ * ---------------------------------------------------------------------
+ * GLPI - Gestionnaire Libre de Parc Informatique
+ * Copyright (C) 2015-2022 Teclib' and contributors.
+ *
+ * http://glpi-project.org
+ *
+ * based on GLPI - Gestionnaire Libre de Parc Informatique
+ * Copyright (C) 2003-2014 by the INDEPNET Development Team.
+ *
+ * ---------------------------------------------------------------------
+ *
+ * LICENSE
+ *
+ * This file is part of GLPI.
+ *
+ * GLPI is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * GLPI is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with GLPI. If not, see <http://www.gnu.org/licenses/>.
+ * ---------------------------------------------------------------------
+ */
+
+$primary: #ff8811;
+$primary-fg: #fff;
+$link-color: #2b2b2b;
+$mainmenu_bg: #e54a16;
+$mainmenu_fg: #fff;
+$accent-color: #ff3366;
+/*
+* $logo: "../pics/logos/login_logo_tipi.png";
+* $logo_reduced: "../pics/logos/login_logo_tipi.png";
+*/
+
+@import "../includes/palette_light";
+
+/*
+* ---------------------------------------------------------------------
+* Custom CSS
+* ---------------------------------------------------------------------
+*/
+
+$logo-light: "../pics/logos/login_logo_tipi.png" !important;
+$logo-light-reduced: "../pics/logos/login_logo_tipi.png" !important;
+$logo-dark: "../pics/logos/login_logo_tipi.png" !important;
+$logo-dark-reduced: "../pics/logos/login_logo_tipi.png" !important;
+$logo-dark-login: "../pics/logos/login_logo_tipi.png" !important;
+$logo-light-login: "../pics/logos/login_logo_tipi.png" !important;
+
+.page {
+    .glpi-logo {
+        background: url($logo) center no-repeat;
+        background-size: contain;
+        height: 100px;
+        width: 100px;
+    }
+}
+
+.page-anonymous {
+    .glpi-logo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@include media-breakpoint-up(lg) {
+    body.navbar-collapsed {
+        .sidebar {
+            #navbar-menu {
+                .nav-item {
+                    .nav-link {
+                        & + .dropdown-menu {
+                            
+                            color: $accent-color;
+                            border: 1px solid $accent-color;
+
+                            .dropdown-item {
+                                &.hover {
+                                    border-left-color: $accent-color;
+                                }
+
+                                &.active {
+                                    background-color: lighten($mainmenu-bg, 40%);
+                                    border-left-color: $accent-color;
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+}
+
+.dashboard {
+
+    .card {
+        box-shadow: none !important;
+
+        margin: 0 !important;
+        border-radius: 5px !important;
+    }
+
+}
