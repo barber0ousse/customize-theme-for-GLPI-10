@@ -35,10 +35,6 @@ $link-color: #2b2b2b;
 $mainmenu_bg: #e54a16;
 $mainmenu_fg: #fff;
 $accent-color: #ff3366;
-/*
-* $logo: "../pics/logos/login_logo_tipi.png";
-* $logo_reduced: "../pics/logos/login_logo_tipi.png";
-*/
 
 @import "../includes/palette_light";
 
@@ -47,13 +43,6 @@ $accent-color: #ff3366;
 * Custom CSS
 * ---------------------------------------------------------------------
 */
-
-$logo-light: "../pics/logos/login_logo_tipi.png" !important;
-$logo-light-reduced: "../pics/logos/login_logo_tipi.png" !important;
-$logo-dark: "../pics/logos/login_logo_tipi.png" !important;
-$logo-dark-reduced: "../pics/logos/login_logo_tipi.png" !important;
-$logo-dark-login: "../pics/logos/login_logo_tipi.png" !important;
-$logo-light-login: "../pics/logos/login_logo_tipi.png" !important;
 
 .page {
     .glpi-logo {
