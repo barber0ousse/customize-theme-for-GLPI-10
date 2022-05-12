@@ -91,6 +91,12 @@ In the **head.html.twig** file, you will have to change "*CUSTOM*" to the name y
 <title>{{ title }} - CUSTOM</title>
 ```
 
+#### custom_theme.png & custom_logo.png
+* **custom_theme.png** is a previews of your theme, usually GLPI put a color pallet. It must be in png and measure 60 pixels width by 20 pixels high.
+* **custom_logo.png** is your logo, you can put the size you want and adjust it in your **custom_theme.scss** file.
+
+:warning: Your **custom_theme.scss** and **custom_theme.png** **MUST** have the same name before the extension. :warning:
+
 ___
 ### The python file
 
