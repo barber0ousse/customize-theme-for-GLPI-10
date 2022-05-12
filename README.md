@@ -92,14 +92,13 @@ In the **head.html.twig** file, you will have to change "*CUSTOM*" to the name y
 ```
 
 #### custom_theme.png & custom_logo.png
-* **custom_theme.png** is a previews of your theme, usually GLPI put a color pallet. It must be in png and measure 60 pixels width by 20 pixels high.
+* **custom_theme.png** is a previews of your theme, usually GLPI put a color pallet. It must be in "*png*" and measure 60 pixels width by 20 pixels high.
 * **custom_logo.png** is your logo, you can put the size you want and adjust it in your **custom_theme.scss** file.
 
-:warning: Your **custom_theme.scss** and **custom_theme.png** **MUST** have the same name before the extension. :warning:
+### :warning: Your "custom_theme.scss" and "custom_theme.png" MUST have the same name before the extension. :warning:
 
 ___
 ### The python file
-
 In the python file you have two lines to edit before using it :
 
 ```py
@@ -107,7 +106,7 @@ windows_path = r"" # Path to your custom files "C:\Users\%userprofile%\glpi"
 destination = r"" # Your ssh login to your GLPI server "demo@ip"
 ```
 
-Here is the output you will have
+Here is the output you will have in your **scp.ps1** file
 
 ```ps1
 scp C:\Users\%userprofile%\glpi\css\includes\_logos.scss demo@ip:/var/www/html/glpi/css/includes
