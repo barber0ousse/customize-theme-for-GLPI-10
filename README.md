@@ -108,11 +108,24 @@ ___
 
 ### The python file
 
-In the python file you have two lines to edit before using it :
+In the python file you have two lines to edit before using it (or 3 if your **glpi** folder is not in **/var/www/html/**):
 
 ```py
-windows_path = r"" # Path to your custom files "C:\Users\%userprofile%\glpi"
+# coding: utf-8
+
+import os
+
+windows_path = r"" # Path to your custom files "C:\Users\%userprofile%\glpi" on your computer
 destination = r"" # Your ssh login to your GLPI server "demo@ip"
+separator = "\\"
+
+with open("scp.ps1", "w") as script:
+    for path, dirs, files in os.walk(windows_path):
+        for filename in files:
+            # linux_path is the path to glpi on your server, you can change ":/var/www/html/glpi" to your glpi location if needed
+            linux_path = ":/var/www/html/glpi" + path[len(windows_path):].replace(separator, "/") 
+            command = "scp " + path + separator + filename + " " + destination + linux_path + "\r"
+            script.write(command)
 ```
 
 Here is the output you will have in your **scp.ps1** file
