@@ -29,7 +29,7 @@ glpi/
 * files to edit with custom values
 ```
 
-#### custom_theme.scss
+#### 1.Custom_theme.scss
 
 In the **custom_theme.scss** file, you can change colors on the following lines :
 
@@ -83,11 +83,11 @@ You can also change the logo sizes on the following lines to make it fit as you 
 }
 ```
 
-#### custom_theme.png
+#### 2.Custom_theme.png
 
 **custom_theme.png** is a preview of your theme, usually GLPI put a color pallet. It must be in "*.png*" and measure 60 pixels width by 20 pixels high.
 
-#### head.html.twig
+#### 3.Head.html.twig
 
 In the **head.html.twig** file, you will have to change "*CUSTOM*" to the name you give to your GLPI on the following line :
 
@@ -95,7 +95,7 @@ In the **head.html.twig** file, you will have to change "*CUSTOM*" to the name y
 <title>{{ title }} - CUSTOM</title>
 ```
 
-#### custom_logo.png
+#### 4.Custom_logo.png
 
 **custom_logo.png** is your logo, you can put the size you want and adjust it in your **custom_theme.scss** file.
 
