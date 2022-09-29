@@ -101,38 +101,3 @@ In the **head.html.twig** file, you will have to change "*CUSTOM*" to the name y
 * **custom_logo.png** is your logo, you can put the size you want and adjust it in your **custom_theme.scss** file.
 
 ### :warning: Your "custom_theme.scss" and "custom_theme.png" MUST have the same name before the extension. :warning:
-
-___
-
-### The python file
-
-In the python file you have two lines to edit before using it (or 3 if your **glpi** folder is not in **/var/www/html/**):
-
-```py
-# coding: utf-8
-
-import os
-
-windows_path = r"" # Path to your custom files "C:\Users\%userprofile%\glpi" on your computer
-destination = r"" # Your ssh login to your GLPI server "demo@ip"
-separator = "\\"
-
-with open("scp.ps1", "w") as script:
-    for path, dirs, files in os.walk(windows_path):
-        for filename in files:
-            # linux_path is the path to glpi on your server, you can change ":/var/www/html/glpi" to your glpi location if needed
-            linux_path = ":/var/www/html/glpi" + path[len(windows_path):].replace(separator, "/") 
-            command = "scp " + path + separator + filename + " " + destination + linux_path + "\r"
-            script.write(command)
-```
-
-Here is the output you will have in your **scp.ps1** file
-
-```bash
-scp C:\Users\%userprofile%\glpi\css\includes\_logos.scss demo@ip:/var/www/html/glpi/css/includes
-scp C:\Users\%userprofile%\glpi\css\palettes\custom_theme.scss demo@ip:/var/www/html/glpi/css/palettes
-scp C:\Users\%userprofile%\glpi\css\palettes\previews\custom_theme.png demo@ip:/var/www/html/glpi/css/palettes/previews
-scp C:\Users\%userprofile%\glpi\pics\favicon.ico demo@ip:/var/www/html/glpi/pics
-scp C:\Users\%userprofile%\glpi\pics\logos\custom_logo.png demo@ip:/var/www/html/glpi/pics/logos
-scp C:\Users\%userprofile%\glpi\templates\layout\parts\head.html.twig demo@ip:/var/www/html/glpi/templates/layout/parts
-```
