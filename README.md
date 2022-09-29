@@ -17,8 +17,6 @@ This is what you have in the glpi folder
 ```
 glpi/
 ├── css/
-│   ├── includes/
-│   │   └── logos.scss *
 │   ├── palettes/
 │   │   ├── previews/
 │   │   │   └── custom_theme.png
@@ -35,19 +33,6 @@ glpi/
 * files to edit with custom values
 ```
 
-#### logos.scss
-
-In the **logos.scss** file, you will have to change "*custom_logo.png*" to the name of your own file on the following lines :
-
-```scss
-$logo-light: "../pics/logos/custom_logo.png" !default;
-$logo-light-reduced: "../pics/logos/custom_logo.png" !default;
-$logo-dark: "../pics/logos/custom_logo.png" !default;
-$logo-dark-reduced: "../pics/logos/custom_logo.png" !default;
-$logo-dark-login: "../pics/logos/custom_logo.png" !default;
-$logo-light-login: "../pics/logos/custom_logo.png" !default;
-```
-
 #### custom_theme.scss
 
 In the **custom_theme.scss** file, you can change colors on the following lines :
@@ -59,6 +44,19 @@ $link-color: #2b2b2b;
 $mainmenu_bg: #e54a16;
 $mainmenu_fg: #fff;
 $accent-color: #ff3366;
+```
+
+You can also change logos by replacing "*custom_logo.png*" to the name of your own file on the following lines :
+
+```scss
+$logo-light: "../pics/logos/custom_logo.png" !default;
+$logo-light-reduced: "../pics/logos/custom_logo.png" !default;
+$logo-dark: "../pics/logos/custom_logo.png" !default;
+$logo-dark-reduced: "../pics/logos/custom_logo.png" !default;
+$logo-dark-login: "../pics/logos/custom_logo.png" !default;
+$logo-light-login: "../pics/logos/custom_logo.png" !default;
+$logo: $logo-light;
+$logo_reduced: $logo-light-reduced;
 ```
 
 You can also change the logo sizes on the following lines to make it fit as you want :
